@@ -1,10 +1,9 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>dice_roll</title>
-</head>
-<body>
+@extends ('layouts.master')
+
+@section ('content')
+
     <h1>Roll Dice!</h1>
+
         Your guess is {{{ $guess }}}<br>
 
         Your roll was {{{ $random_number }}}<br>
@@ -15,7 +14,8 @@
     @else
         <p style="color:red;">Sorry guess again!</p>
     @endif
-</body>
-</html>
+
+@stop
+
 
 
