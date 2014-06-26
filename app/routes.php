@@ -45,7 +45,7 @@
 
 Route::get('/rolldice/{guess}', function($guess) {
     $rand = mt_rand(1,6);
-
+    //assoc array
     $data = array(
         'random_number' => $rand,
         'guess' => $guess
