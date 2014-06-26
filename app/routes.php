@@ -9,24 +9,11 @@
 | It's a breeze. Simply tell Laravel the URIs it should respond to
 | and give it the Closure to execute when that URI is requested.
 |
-*/
-// Route::get('/', function() {
-//     return "we are home";
-// });
+// */
 
-// Route::get('/sayhello/{name}', function($name)
-// {
-// 	if ($name == "Greg")
-//     {
-//         return Redirect::to('http://www.google.com');
-//     }
-//     else
-//     {
-//         return "Hello, $name!";
-//     }
-// });
+// added routes for home resume and portfolio//
 Route::get('/', function(){
-    return 'Welcome Home!';
+    return View::make('temp.my-first-view');
 });
 
 Route::get('/resume', function() {
