@@ -25,7 +25,10 @@
 //         return "Hello, $name!";
 //     }
 // });
-//
+Route::get('/', function(){
+    return 'Welcome Home!';
+});
+
 Route::get('/resume', function() {
     return 'This is my Resume!';
 });
