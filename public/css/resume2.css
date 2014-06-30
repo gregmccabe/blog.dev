@@ -1,0 +1,23 @@
+
+.row {
+
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 17px;
+    background-color: rgb(215, 240, 215)
+}
+#greg {
+    font-weight: bold;
+}
+.objective {
+    padding: 45px;
+    margin-right: 200px;
+    margin-left: 200px;
+    font-size: 15px;
+    font-family: georgia;
+
+}
+
+
+

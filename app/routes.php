@@ -17,13 +17,15 @@ Route::get('/', function(){
     return View::make('hello');
 });
 
-Route::get('/resume', function() {
-    return View::make('resume');
-});
 
-Route::get('/portfolio', function() {
-    return View::make('portfolio');
-});
+
+
+Route::resource('posts', 'PostsController');
+
+
+Route::get('resume', 'HomeController@showResume');
+
+Route::get('portfolio', 'HomeController@showPortfolio');
 
 
 

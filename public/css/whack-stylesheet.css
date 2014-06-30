@@ -1,0 +1,57 @@
+.gameBoard {
+
+    border:1px #ccc;
+    margin: auto;
+    height: 456px;
+    width: 456px;
+    padding-top: 30px;
+}
+
+.box {
+    border:1px solid #ccc;
+    width: 150px;
+    height: 150px;
+    float: left;
+
+}
+
+.mole {
+    display: none;
+    cursor: pointer;
+    background-image: url('/img/lebron.jpg');
+    width: 150px;
+    height: 150px;
+}
+
+body {
+    background-image: url('/img/james-background-2.jpg');
+
+}
+
+#timer {
+    font-size: 35px;
+    color:red;
+    text-align: center;
+}
+
+
+#start_button {
+    color: #ccc;
+    background-color: #FF0000;
+    width: 100px;
+    height: 50px;
+}
+
+#header {
+    width: 825px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color:#ccc;
+}
+
+#running_total{
+    font-size: 30px;
+    color:white;
+    text-align: center;
+}
