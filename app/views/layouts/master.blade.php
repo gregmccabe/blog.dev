@@ -10,7 +10,7 @@
     <link href="/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <!-- <link href="/css/main.css" rel="stylesheet"> -->
+    <link href="/css/blog_stylesheet.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/font-awesome.min.css">
 
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
@@ -23,6 +23,17 @@
     <body>
         <div class="container">
             @yield('content')
+
+            @if (Session::has('successMessage'))
+                <div class="alert alert-success">
+                    {{{ Session::get('successMessage') }}}
+                </div>
+            @endif
+            @if (Session::has('errorMessage'))
+                <div class="alert alert-danger">
+                    {{{ Session::get('errorMessage') }}}
+                </div>
+            @endif
         </div>
 @yield('bottomscript')
     <script src="/js/bootstrap.js"></script>

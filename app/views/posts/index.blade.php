@@ -4,6 +4,10 @@
 <div id="container">
     <h1>All Posts</h1>
     <hr>
+    <div>
+        <a href="{{ action('PostsController@create') }}" class="btn btn-default btn-sm">Create Post</a>
+    </div>
+    <br>
     <table class="table table-striped">
         <tr>
             <th>title</th>
@@ -13,7 +17,7 @@
     @foreach ($posts as $post)
     <tr>
         <td><a href="{{ action('PostsController@show', $post->id) }}">{{{ $post->title }}}</a></td>
-        <td>{{{ $post->created_at->setTimezone('America/Chicago')->format('l, F jS Y @ h:i:s A') }}}</td>
+        <td>{{{ $post->created_at->format('l, F jS Y @ h:i:s A') }}}</td>
         <td><a href="{{ action('PostsController@edit', $post->id) }}" class="btn btn-default btn-sm">Edit</a></td>
     </tr>
     @endforeach
