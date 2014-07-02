@@ -21,8 +21,9 @@
     <script src="/js/Chart.js"></script>
 </head>
     <body>
-@yield('content')
-
+        <div class="container">
+            @yield('content')
+        </div>
 @yield('bottomscript')
     <script src="/js/bootstrap.js"></script>
     </body>
