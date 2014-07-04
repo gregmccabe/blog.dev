@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
+
 <div id="container">
     <h1>All Posts</h1>
     <hr>
@@ -24,5 +25,6 @@
     </table>
     {{ $posts->links() }}
 </div>
+
 
 @stop

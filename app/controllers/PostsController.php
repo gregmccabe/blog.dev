@@ -19,7 +19,17 @@ class PostsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$posts = Post::paginate(4);
+		$posts = Post::with('user')->paginate(4);
+
+		if(Input::has('search'))
+		{
+			$search = Input::get('search');
+
+			$posts = Post::where("title", "LIKE", "%$search%")
+								->orWhere("body", "LIKE", "%$search%")
+								->paginate(4);
+
+		}
 
 		return View::make('posts.index')->with('posts', $posts);
 	}
@@ -55,6 +65,7 @@ class PostsController extends \BaseController {
 		$post = new Post();
 		$post->title = Input::get('title');
 		$post->body = Input::get('body');
+		$post->user_id = Auth::user()->id;
 		$post->save();
 		Session::flash('successMessage', 'Post added successfully!');
 		return Redirect::action('PostsController@index');

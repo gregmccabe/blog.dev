@@ -7,7 +7,12 @@ class Post extends BaseModel {
     // validation rules for our modle properties
     static public $rules = [
         'title' => 'required|max:100',
-        'body' => 'required|max:100'
+        'body' => 'required'
     ];
+
+    public function user()
+{
+    return $this->belongsTo('User');
+}
 
 }

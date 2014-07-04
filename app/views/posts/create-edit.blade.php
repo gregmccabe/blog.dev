@@ -25,6 +25,7 @@
         <button type="submit" class="btn btn-success">Submit</button>
         {{ Form::close() }}
     </div>
+
 @stop
 
 <!-- <textarea class="form-control" rows="3"></textarea> -->

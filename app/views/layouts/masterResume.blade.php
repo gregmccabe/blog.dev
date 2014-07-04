@@ -41,8 +41,8 @@
                         <ul id="nav" class="nav">
                             <li class="menu-item"><a class="smoothScroll" href="#about" title="About"><i class="icon-user"></i></a></li>
                             <li class="menu-item"><a class="smoothScroll" href="#resume" title="Resume"><i class="icon-file"></i></a></li>
-
                             <li class="menu-item"><a class="smoothScroll" href="#contact" title="Contact"><i class="icon-envelope"></i></a></li>
+                            <li class="menu-item"><a class="smoothScroll" href="{{ action('PostsController@index') }}" title="Blog"><i class="icon-file"></i></a></li>
                         </ul><!--/ uL#nav -->
                     </div><!-- /.dropdown -->
 
