@@ -93,28 +93,44 @@
                     <h5>WORK</h5>
                 </div>
                 <div class="col-lg-6">
-                    <p><t>Field Manager</t><br/>
-                        Mastec Advanced Technologies.<br/>
+                    <p><t>Full Stack Web Developer</t><br/>
+                        Web developer using modern web technologies such as the Laravel Framework and the LAMP+J stack (Linux, Apache, MySQL, PHP, JavaScript) to create web applications. Current projects include:.<br/>
                     </p>
-                    <p><more>Monitor and manage Technician Productivity within the assigned market to       ensure compliance with MasTec and DirecTV policies and procedures.<br>
-                            Communicate daily with the Customer Care Manager to ensure proper management of installation and service call calendars.<br>
-                            Monitor daily technician productivity data and utilize to schedule employees, manage resources, and reward/counsel employees for productivity.<br>
-                            Work closely with Sub-partner principals and supervisors to ensure compliance with all MasTec and DirecTV policies and procedures.<br>
-                            Responsible for supervisory functions on all shifts; manage the counseling process by monitoring employee productivity, and other performance markers
-                            Participate in employee evaluations making recommendations for improvement and implement training initiatives for staff which includes ensuring training for promotional opportunities.<br>
-                            Perform Quality Inspections on a consistent basis and within the guidelines as directed by Service Line Management.<br> Train, and/or up train employees on the standards of installation and service.<br> Bring jobs up to specifications, if needed.<br>
-                            Install and service of standard, KA/KU, And KA/KU Swim satellite systems</more></p>
+                    <p><more>
+                        <ul>
+                            <l1>Group project developing web application for. Built using Laravel, PHP, MySQL, JavaScript, jQuery, HTML, CSS and Twitter Bootstrap. Notable personal contributions include credit card payment integration via Stripe API, and automated SMS messaging via Twilio. Development done in a Vagrant environment. Version control using Git and GitHub.</l1><br>
+                            <br>
+                            <l1>Blog application for writing and viewing blog posts as well as my personal portfolio and resume. Built using Laravel, PHP, MySQL, JavaScript, jQuery, Twitter Bootstrap, Subline text editor plugin, Disqus commenting system. Development done in a Vagrant environment. Version control using Git and GitHub. Features user logins, blog post creation and viewing, image upload, search functionality, password reset functionality, and ability for authors to edit posts.</l1>
+                        </ul>
+                    </more></p>
                 </div>
                 <div class="col-lg-3">
-                    <p><sm>AUGUST 2012 - CURRENT</sm></p>
+                    <p><sm>April 2014 - CURRENT</sm></p>
                 </div>
 
                 <div class="col-lg-6 col-lg-offset-3">
-                    <p><t>Territory Manager</t><br/>
-                        Medical Device Sales <br/>
+                    <p><t>Field Technician Manager</t><br/>
+                        Mastec Advanced Technologies<br/>
                     </p>
-                    <p><more>Over 5 years of Spine and Craniomaxillofacial experience.<br>
-                        Sold a complete range of titanium implants, spinal fusion products, instrumentation and biologics for Craniomaxillofacial and Spine procedure</more></p>
+                    <p><more>
+                        <ul>
+                            <p>Monitor and manage Technician Productivity within the assigned market to ensure compliance with MasTec & DirecTV policies and procedures. Communicate daily with the Customer Care Manager to ensure proper management of installation and service call calendars.</p>
+                            <p>Monitor daily technician productivity data and utilize to schedule employees, manage resources, and reward/counsel employees for productivity. Also worked closely with Sub-partner principals and supervisors to ensure compliance with all MasTec & DirecTV policies and procedures.</p>
+                            <p>Perform Quality Inspections on a consistent basis and within the guidelines as directed by Service Line Management. Train, and/or up train employees on the standards of installation and service. Bring jobs up to specifications, if needed. </p>
+                        </ul>
+                    </more></p>
+                </div>
+                <div class="col-lg-3">
+                    <p><sm>JUNE 2011 - December 2012</sm></p>
+                </div>
+
+
+                <div class="col-lg-6 col-lg-offset-3">
+                    <p><t>Territory Manager</t><br/>
+                        Over 5 years of Spine and Craniomaxillofacial experience.<br>
+                        Sold a complete range of titanium implants, spinal fusion products, instrumentation and biologics for Neurosurgery and Oral Surgery procedures. <br/>
+                    </p>
+                    <p><more></more></p>
                 </div>
                 <div class="col-lg-3">
                     <p><sm>JUNE 2006 - December 2010</sm></p>
