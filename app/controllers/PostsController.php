@@ -67,6 +67,13 @@ class PostsController extends \BaseController {
 		$post->body = Input::get('body');
 		$post->user_id = Auth::user()->id;
 		$post->save();
+
+		// Check your six, bro. You got typos.
+		if (Input::hasFile('image') && Input::file('image')->isValid()) {
+			$post->addUploadedImage(Input::file('image'));
+			$post->save();
+		}
+
 		Session::flash('successMessage', 'Post added successfully!');
 		return Redirect::action('PostsController@index');
 	}
@@ -106,11 +113,22 @@ class PostsController extends \BaseController {
 	 */
 	public function update($id)
 	{
+		$post = new Post();
+
+		if ($id != null) {
+			$post = Post::findOrFail($id);
+		}
+
+		if (Input::hasFile('image') && Input::file('image')->isValid()) {
+			$post->addUploadedImage(Input::file('image'));
+			$post->save();
+		}
 
 		$post = Post::find($id);
 		$post->title = Input::get('title');
 		$post->body = Input::get('body');
 		$post->save();
+
 		Session::flash('successMessage', 'Your update was saved');
 		return Redirect::action('PostsController@index');
 	}
