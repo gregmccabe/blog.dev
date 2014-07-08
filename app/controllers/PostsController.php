@@ -19,7 +19,7 @@ class PostsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$posts = Post::with('user')->paginate(4);
+		$posts = Post::with('user')->orderBy('created_at', 'desc')->paginate(4);
 
 		if(Input::has('search'))
 		{
