@@ -7,7 +7,7 @@
 @if ($post->img_path)
     <img src="{{{ $post->img_path }}}" class="img-reponsive">
 @endif
-<p>{{{ $post->body }}}</p>
+<p>{{ $post->renderBody() }}</p>
 
 {{ Form::open(array('action' => array('PostsController@destroy', $post->id), 'method' => 'DELETE')) }}<br>
 <p>{{ Form::submit('Delete') }}</p>

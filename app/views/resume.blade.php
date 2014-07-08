@@ -292,7 +292,7 @@
                 <div class="col-lg-3">
                     <p><sm>SOCIAL LINKS</sm></p>
                     <p>
-
+                        <a href="https://github.com/gregmccabe"><i class="fa fa-github-square"></i></a>
                         <a href="https://twitter.com/Greg_McCabe"><i class="icon-twitter"></i></a>
                         <a href="https://www.facebook.com/RedStar.Hobby"><i class="icon-facebook"></i></a>
                         <a href="https://www.linkedin.com/pub/greg-mccabe/19/9b1/739"><i class="icon-linkedin"></i></a>
