@@ -9,7 +9,17 @@
 @endif
 <p>{{ $post->renderBody() }}</p>
 
-{{ Form::open(array('action' => array('PostsController@destroy', $post->id), 'method' => 'DELETE')) }}<br>
-<p>{{ Form::submit('Delete') }}</p>
+<a href="#" class="deletePost btn btn-danger btn-sm" data-postid="{{ $post->id }}">Delete</a>
+{{ Form::open(array('action' => array('PostsController@destroy', $post->id), 'id' => 'deleteForm', 'method' => 'DELETE')) }}
 {{ Form::close() }}
+@stop
+
+@section('bottomscript')
+<script type="text/javascript">
+    $(".deletePost").click(function() {
+        if (confirm("Are you sure you want to delete post")) {
+            $('#deleteForm').submit();
+        }
+    });
+</script>
 @stop
