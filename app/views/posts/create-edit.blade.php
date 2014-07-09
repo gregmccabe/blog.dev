@@ -30,6 +30,23 @@
 <!-- <button type="button" class="btn btn-primary">Submit</button> -->
 @stop
 
+@section('bottomscript')
+
+        <script type="text/javascript" src="../../Markdown.Converter.js"></script>
+        <script type="text/javascript" src="../../Markdown.Sanitizer.js"></script>
+        <script type="text/javascript" src="../../Markdown.Editor.js"></script>
+
+        <script type="text/javascript">
+            (function () {
+                var converter1 = Markdown.getSanitizingConverter();
+
+                var editor1 = new Markdown.Editor(converter1);
+
+                editor1.run();
+            })();
+        </script>
+
+@stop
 
 
 <!-- <textarea class="form-control" rows="3"></textarea> -->
