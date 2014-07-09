@@ -8,10 +8,11 @@
     <img src="{{{ $post->img_path }}}" class="img-reponsive">
 @endif
 <p>{{ $post->renderBody() }}</p>
-
+@if (Auth::check())
 <a href="#" class="deletePost btn btn-danger btn-sm" data-postid="{{ $post->id }}">Delete</a>
 {{ Form::open(array('action' => array('PostsController@destroy', $post->id), 'id' => 'deleteForm', 'method' => 'DELETE')) }}
 {{ Form::close() }}
+@endif
 @stop
 
 @section('bottomscript')
