@@ -22,52 +22,58 @@
 </head>
     <body>
         <div class="navbar navbar-default">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">A var_dump(for my thoughts);</a>
-          </div>
-        <div class="navbar-collapse collapse navbar-responsive-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="{{ action('PostsController@index') }}">Home</a></li>
-            <li><a href="{{ action('HomeController@showResume') }}">Resume</a></li>
-          </ul>
-          {{ Form::open(array('action' => 'PostsController@index', 'class' => 'navbar-form navbar-left', 'method' => 'GET')) }}
-                  {{ Form::text('search', null, array('placeholder' => 'Search Query', 'class' => 'form-control col-lg-8')) }}
-                  <button type="submit" class="btn btn-primary">Submit</button>
-          {{ Form::close() }}
-          <ul class="nav navbar-nav navbar-right">
+            <div class="navbar-header">
 
-            @if (Auth::check())
-            <li><a href="{{ action('HomeController@doLogout') }}">Log out</a></li>
-            @else
-            <li><a href="{{ action('HomeController@showLogin') }}">Log In</a></li>
-            @endif
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 
-          </ul>
-          </div>
+                <a class="navbar-brand" href="action('PostsController@index')">A var_dump(for my thoughts);</a>
+
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="{{ action('PostsController@index') }}">Home</a></li>
+                    <li><a href="{{ action('HomeController@showResume') }}">Resume</a></li>
+                </ul>
+
+                {{ Form::open(array('action' => 'PostsController@index', 'class' => 'navbar-form navbar-left', 'method' => 'GET')) }}
+                    {{ Form::text('search', null, array('placeholder' => 'Search Query', 'class' => 'form-control col-lg-8')) }}
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                {{ Form::close() }}
+
+                <ul class="nav navbar-nav navbar-right">
+                    @if (Auth::check())
+                    <li><a href="{{ action('HomeController@doLogout') }}">Log out</a></li>
+                    @else
+                    <li><a href="{{ action('HomeController@showLogin') }}">Log In</a></li>
+                    @endif
+                </ul>
+            </div>
         </div>
         <div class="container">
-            @yield('content')
-
             @if (Session::has('successMessage'))
-                <div class="alert alert-success">
+                <div class="alert alert-success" id="fade_message">
                     {{{ Session::get('successMessage') }}}
                 </div>
             @endif
             @if (Session::has('errorMessage'))
-                <div class="alert alert-danger">
+                <div class="alert alert-danger" id="fade_message">
                     {{{ Session::get('errorMessage') }}}
                 </div>
             @endif
+            @yield('content')
         </div>
 
 @yield('bottomscript')
 
 
-    <script src="/js/bootstrap.js"></script>
+        <script src="/js/bootstrap.js"></script>
+        <script>
+        $('#fade_message').delay(2000).fadeOut(1000);
+        </script>
     </body>
 </html>

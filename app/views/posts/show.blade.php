@@ -1,26 +1,40 @@
 @extends('layouts.master')
+
 @section('content')
-<h1>{{{ $post->title }}}</h1>
+
+<h1 class="title">{{{ $post->title }}}</h1>
+
 <h4>Author: {{{ $post->user->email }}}</h4>
+
 <h4>{{{ $post->created_at->format('l, F jS Y @ h:i:s A') }}}</h4>
+
+<hr>
 
 @if ($post->img_path)
     <img src="{{{ $post->img_path }}}" class="img-reponsive">
 @endif
+
 <p>{{ $post->renderBody() }}</p>
+
 @if (Auth::check())
-<a href="#" class="deletePost btn btn-danger btn-sm" data-postid="{{ $post->id }}">Delete</a>
+    <a href="{{ action('PostsController@edit', $post->id) }}" class="btn btn-default btn-sm">Edit</a>
+    <a href="#" class="deletePost btn btn-danger btn-sm" data-postid="{{ $post->id }}">Delete</a>
 {{ Form::open(array('action' => array('PostsController@destroy', $post->id), 'id' => 'deleteForm', 'method' => 'DELETE')) }}
 {{ Form::close() }}
 @endif
+
+<hr>
+
 @stop
 
 @section('bottomscript')
+
 <script type="text/javascript">
     $(".deletePost").click(function() {
         if (confirm("Are you sure you want to delete post")) {
             $('#deleteForm').submit();
-        }
+        };
     });
 </script>
+
 @stop

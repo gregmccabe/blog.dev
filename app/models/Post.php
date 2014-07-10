@@ -26,10 +26,15 @@ class Post extends BaseModel {
         $this->img_path = '/' . $this->imgDir . '/' . $imageName;
     }
 
-    public function renderBody()
+    public function renderBody($summary = false)
     {
+        $body = $this->body;
 
-        $dirty_html = Parsedown::instance()->parse($this->body);
+        if ($summary) {
+            $body = str_limit($this->body, 100);
+        }
+
+        $dirty_html = Parsedown::instance()->parse($body);
         $config = HTMLPurifier_Config::createDefault();
         $purifier = new HTMLPurifier($config);
         $clean_html = $purifier->purify($dirty_html);

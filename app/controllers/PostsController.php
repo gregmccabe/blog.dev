@@ -62,22 +62,22 @@ class PostsController extends \BaseController {
 
 		} else {
 
-		$post = new Post();
-		$post->title = Input::get('title');
-		$post->body = Input::get('body');
-		$post->user_id = Auth::user()->id;
-		$post->save();
-
-		// Check your six, bro. You got typos.
-		if (Input::hasFile('image') && Input::file('image')->isValid()) {
-			$post->addUploadedImage(Input::file('image'));
+			$post = new Post();
+			$post->title = Input::get('title');
+			$post->body = Input::get('body');
+			$post->user_id = Auth::user()->id;
 			$post->save();
-		}
 
-		Session::flash('successMessage', 'Post added successfully!');
-		return Redirect::action('PostsController@index');
+			if (Input::hasFile('image') && Input::file('image')->isValid()) {
+				$post->addUploadedImage(Input::file('image'));
+				$post->save();
+			}
+
+			Session::flash('successMessage', 'Post added successfully!');
+			return Redirect::action('PostsController@index');
+		}
 	}
-}
+
 
 	/**
 	 * Display the specified resource.
@@ -145,10 +145,12 @@ class PostsController extends \BaseController {
 	{
 		$post = Post::findOrFail($id);
 		$post->delete();
+
 		Session::flash('successMessage', 'Post deleted successfully');
 
 		return Redirect::action('PostsController@index');
 	}
+
 
 
 }
