@@ -16,7 +16,7 @@
     <div class="row">
         <br>
         <div class="col-md-2 col-sm-3 text-center">
-            <a class="story-img" href="#"><img src="/greg.jpg" style="width:100px;height:100px" class="img-circle"></a>
+            <a class="story-img" href="{{ action('HomeController@showResume') }}"><img src="/greg.jpg" style="width:100px;height:100px" class="img-circle"></a>
         </div>
         <div class="col-md-10 col-sm-9">
             <h3><a href="{{ action('PostsController@show', $post->id) }}">{{{ $post->title }}}</a></h3>
