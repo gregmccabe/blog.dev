@@ -30,7 +30,7 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand" href="action('PostsController@index')">A var_dump(for my thoughts);</a>
+                <a class="navbar-brand" href="{{ action('PostsController@index') }}">A var_dump(for my thoughts);</a>
 
             </div>
             <div class="navbar-collapse collapse navbar-responsive-collapse">
