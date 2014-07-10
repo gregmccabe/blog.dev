@@ -30,3 +30,11 @@ h4, h1, h2, h3, h5, h6 {
 .form-group {
     color:#ccc;
 }
+
+.social {
+    float: right;
+}
+
+.big-icon {
+    font-size: 20px;
+}

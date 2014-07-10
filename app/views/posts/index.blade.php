@@ -22,9 +22,9 @@
             <h3><a href="{{ action('PostsController@show', $post->id) }}">{{{ $post->title }}}</a></h3>
             <div class="row">
                 <div class="col-xs-9">
-                    <blockquote>{{ $post->renderBody(true) }}</blockquote>
                     <p>{{{ $post->user->email }}}</p>
                     <p>{{{ $post->created_at->format('l, F jS Y @ h:i:s A') }}}</p>
+                    <blockquote>{{ $post->renderBody(true) }}</blockquote>
                     <p>
                         @if (Auth::check())
                                 <a href="{{ action('PostsController@edit', $post->id) }}" class="btn btn-default btn-sm">Edit</a>
