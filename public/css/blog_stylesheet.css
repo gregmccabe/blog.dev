@@ -38,3 +38,7 @@ h4, h1, h2, h3, h5, h6 {
 .big-icon {
     font-size: 20px;
 }
+
+#disqus_thread {
+    color:#ccc;
+}
