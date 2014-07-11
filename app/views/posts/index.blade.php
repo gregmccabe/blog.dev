@@ -19,7 +19,7 @@
             <a class="story-img" href="{{ action('HomeController@showResume') }}"><img src="/greg.jpg" style="width:100px;height:100px" class="img-circle"></a>
         </div>
         <div class="col-md-10 col-sm-9">
-            <h3><a href="{{ action('PostsController@show', $post->id) }}">{{{ $post->title }}}</a></h3>
+            <h3><a href="{{ action('PostsController@show', $post->slug) }}">{{{ $post->title }}}</a></h3>
             <div class="row">
                 <div class="col-xs-9">
                     <p>{{{ $post->user->email }}}</p>
@@ -31,7 +31,7 @@
                                 <a href="#" class="deletePost btn btn-danger btn-sm" data-postid="{{ $post->id }}">Delete</a>
                         @endif
                     </p>
-                    <p class="lead"><a href="{{ action('PostsController@show', $post->id) }}" class="btn btn-default">Read More</a></p>
+                    <p class="lead"><a href="{{ action('PostsController@show', $post->slug) }}" class="btn btn-default">Read More</a></p>
 
                 </div>
                 <div class="col-xs-3"></div>

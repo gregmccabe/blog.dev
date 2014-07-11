@@ -41,6 +41,11 @@ class Post extends BaseModel {
 
         return $clean_html;
 
+    }
 
+    public function setSlugAttribute($value)
+    {
+        $value = str_replace(' ', '-', trim($this->title));
+        $this->attributes['slug'] = strtolower($value);
     }
 }
