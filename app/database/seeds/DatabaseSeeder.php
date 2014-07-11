@@ -24,13 +24,8 @@ class UsersTableSeeder extends Seeder {
         DB::table('users')->delete();
 
         $user = new User();
-        $user->email = 'admin@codeup.com';
-        $user->password = Hash::make('adminPass123!');
-        $user->save();
-
-        $user = new User();
-        $user->email = 'greg@codeup.com';
-        $user->password = Hash::make('adminPass123!');
+        $user->email = $_ENV['ADMIN_USER'];
+        $user->password = Hash::make($_ENV['ADMIN_PASS']);
         $user->save();
     }
 

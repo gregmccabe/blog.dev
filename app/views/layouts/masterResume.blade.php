@@ -8,8 +8,8 @@
     <link rel="shortcut icon" href="assets/ico/favicon.png">
 
     <title>Greg S. McCabe Resume</title>
+    <link href="/css/resume-stylesheet.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.css" rel="stylesheet">
 
