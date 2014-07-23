@@ -177,11 +177,11 @@
                         <script>
                             var doughnutData = [
                                     {
-                                        value: 90,
+                                        value: 70,
                                         color:"#1abc9c"
                                     },
                                     {
-                                        value : 10,
+                                        value : 30,
                                         color : "#ecf0f1"
                                     }
                                 ];
@@ -195,11 +195,11 @@
                         <script>
                             var doughnutData = [
                                     {
-                                        value: 65,
+                                        value: 40,
                                         color:"#1abc9c"
                                     },
                                     {
-                                        value : 35,
+                                        value : 60,
                                         color : "#ecf0f1"
                                     }
                                 ];
@@ -214,11 +214,11 @@
                         <script>
                             var doughnutData = [
                                     {
-                                        value: 80,
+                                        value: 70,
                                         color:"#1abc9c"
                                     },
                                     {
-                                        value : 20,
+                                        value : 30,
                                         color : "#ecf0f1"
                                     }
                                 ];
@@ -250,11 +250,11 @@
                         <script>
                             var doughnutData = [
                                     {
-                                        value: 50,
+                                        value: 40,
                                         color:"#1abc9c"
                                     },
                                     {
-                                        value : 50,
+                                        value : 60,
                                         color : "#ecf0f1"
                                     }
                                 ];
