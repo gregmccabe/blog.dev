@@ -98,7 +98,7 @@
                     </p>
                     <p><more>
                         <ul>
-                            <l1>Group project developing web application for. Built using Laravel, PHP, MySQL, JavaScript, jQuery, HTML, CSS and Twitter Bootstrap. Notable personal contributions include credit card payment integration via Stripe API, and automated SMS messaging via Twilio. Development done in a Vagrant environment. Version control using Git and GitHub.</l1><br>
+                            <l1>Group project developing web application Prosifters for users to find businesses or services that have been peer reviewed. Built using Laravel, PHP, MySQL, JavaScript, jQuery, HTML, CSS and Twitter Bootstrap. Development done in a Vagrant environment. Version control using Git and GitHub. Features user logins, review creation and viewing, search functionality, password reset functionality, and ability for authors to edit reviews.</l1><br>
                             <br>
                             <l1>Blog application for writing and viewing blog posts as well as my personal portfolio and resume. Built using Laravel, PHP, MySQL, JavaScript, jQuery, Twitter Bootstrap, Subline text editor plugin, Disqus commenting system. Development done in a Vagrant environment. Version control using Git and GitHub. Features user logins, blog post creation and viewing, image upload, search functionality, password reset functionality, and ability for authors to edit posts.</l1>
                         </ul>
